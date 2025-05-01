@@ -1,0 +1,76 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 0 0% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 60 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 270 95% 65%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 12 60% 45%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-game-bg text-foreground;
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', system-ui, sans-serif;
+  }
+
+  canvas {
+    display: block;
+  }
+  
+  html, body, #root {
+    height: 100%;
+    overflow-x: hidden;
+  }
+}
+
+/* Import pixel-style font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@layer components {
+  .neon-text {
+    @apply animate-glow;
+  }
+
+  .mobile-control {
+    width: 45px;
+    height: 45px;
+    @apply rounded-full border-2 border-white/20 transition-transform active:scale-95;
+  }
+}
+
